@@ -29,3 +29,8 @@ Então o título da página deve ficar "${TITULO}"
     Title Should Be    title=${TITULO}
 E a categoria "${NOME_CATEGORIA}" deve ser exibida na página
     Element Should Be Visible    locator=//img[@alt='${NOME_CATEGORIA}']
+Quando pesquisar pelo produto "${NOME_PRODUTO}"
+    Input Text    locator=${CAMPO_PESQUISA}    text=${NOME_PRODUTO}
+    Click Button    locator=${BOTAO_PESQUISA}
+E um produto da linha "${NOME_PRODUTO}" deve ser mostrado na página
+    Wait Until Element Is Visible    locator=(//span[contains(.,'${NOME_PRODUTO}')])[3]

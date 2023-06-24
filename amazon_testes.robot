@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Essa suite testa o site Amazon.com.br
+Documentation    Essa suite testa o site Amazon.com.br sem BDD
 Resource         amazon_resources.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
